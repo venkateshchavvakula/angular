@@ -226,7 +226,10 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <div style="padding-top: 6px;">
+        <span>Current Theme: {{ isDarkTheme ? 'Dark' : 'Light' }}</span>
+        <mat-slide-toggle  style="width: 100%;" (change)="toggleTheme()"></mat-slide-toggle>
+      </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
